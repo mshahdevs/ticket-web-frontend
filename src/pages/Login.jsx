@@ -54,47 +54,49 @@ export const Login = () => {
     //  if(is)
   }, [dispatch, isSuccess, navigate, user, isError]);
   return (
-    <>
-      <section className='heading'>
-        <h1>
-          <FaSignInAlt />
-          Login
-        </h1>
-        <p>Please login your account</p>
-      </section>
-      <section className='form'>
-        <form onSubmit={handleSubmit}>
-          <div className='form-group'>
-            <input
-              type='email'
-              onChange={onChange}
-              value={email}
-              placeholder='Enter your email address'
-              name='email'
-              id='email'
-              required
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type={isPasswordVisible ? 'text' : 'password'}
-              onChange={onChange}
-              value={password}
-              placeholder='Enter your password'
-              name='password'
-              id='password'
-              required
-            />
-            <span className='eye-icon' onClick={handlePasswordVisible1}>
-              {isPasswordVisible ? <FaEye /> : <FaEyeSlash />}
-            </span>
-          </div>
+    <div className='container'>
+      <div className='login'>
+        <section className='heading'>
+          <h1 className='login_text'>
+            <FaSignInAlt />
+            Login
+          </h1>
+          <p>Please login your account</p>
+        </section>
+        <section className='form'>
+          <form onSubmit={handleSubmit}>
+            <div className='form-group'>
+              <input
+                type='email'
+                onChange={onChange}
+                value={email}
+                placeholder='Enter your email address'
+                name='email'
+                id='email'
+                required
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                type={isPasswordVisible ? 'text' : 'password'}
+                onChange={onChange}
+                value={password}
+                placeholder='Enter your password'
+                name='password'
+                id='password'
+                required
+              />
+              <span className='eye-icon' onClick={handlePasswordVisible1}>
+                {isPasswordVisible ? <FaEye /> : <FaEyeSlash />}
+              </span>
+            </div>
 
-          <div className='form-group'>
-            <button>Submit</button>
-          </div>
-        </form>
-      </section>
-    </>
+            <div className='form-group'>
+              <button className='btn_submit'>Submit</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
   );
 };

@@ -44,12 +44,45 @@ body {
 .btn-links div:hover {
   transform: scale(1.02);
 }
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
+}
+.register {
+  padding: 10px;
+  background-color: white;
+  margin: 0 auto;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.register_text {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.login {
+  padding: 10px;
+  background-color: white;
+  margin: 0 auto;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.login_text {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
 .heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0%;
+  /* background-color: red; */
 }
 .heading h1 {
   margin-bottom: 0;
@@ -155,11 +188,19 @@ li a {
 }
 
 .form-group {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.form-group span {
+  position: absolute;
+  top: 34%;
+  right: 3%;
+}
+
 .form-group input {
   padding: 5px;
   border-radius: 4px;
@@ -172,6 +213,15 @@ li a {
   right: -75px;
 }
 
+.btn_submit {
+  padding: 5px 20px;
+  background-color: white;
+  margin-top: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  color: rgba(14, 12, 12, 0.659);
+  cursor: pointer;
+}
 .loader {
   width: 64px;
   height: 64px;

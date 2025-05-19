@@ -68,71 +68,73 @@ export const Register = () => {
     return <Spinner />;
   }
   return (
-    <>
-      <section className='heading'>
-        <h1>
-          <FaUser />
-          Register
-        </h1>
-        <p>Please create an account</p>
-      </section>
-      <section className='form'>
-        <form onSubmit={handleSubmit}>
-          <div className='form-group'>
-            <input
-              type='text'
-              onChange={onChange}
-              value={name}
-              placeholder='Enter your name'
-              name='name'
-              id='name'
-              required
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type='email'
-              onChange={onChange}
-              value={email}
-              placeholder='Enter your email address'
-              name='email'
-              id='email'
-              required
-            />
-          </div>
-          <div className='form-group'>
-            <input
-              type={isPasswordVisible ? 'text' : 'password'}
-              onChange={onChange}
-              value={password}
-              placeholder='Enter your password'
-              name='password'
-              id='password'
-              required
-            />
-            <span onClick={handlePasswordVisible1}>
-              {isPasswordVisible ? <FaEye /> : <FaEyeSlash />}
-            </span>
-          </div>
-          <div className='form-group'>
-            <input
-              type={isConfrimPasswordVisible ? 'text' : 'password'}
-              onChange={onChange}
-              value={password2}
-              placeholder='Confirm your password'
-              name='password2'
-              id='password2'
-              required
-            />
-            <span onClick={handlePasswordVisible2}>
-              {isConfrimPasswordVisible ? <FaEye /> : <FaEyeSlash />}
-            </span>
-          </div>
-          <div className='form-group'>
-            <button>Submit</button>
-          </div>
-        </form>
-      </section>
-    </>
+    <div className='container'>
+      <div className='register'>
+        <section className='heading'>
+          <h1 className='register_text'>
+            <FaUser />
+            Register
+          </h1>
+          <p>Please create an account</p>
+        </section>
+        <section className='form'>
+          <form onSubmit={handleSubmit}>
+            <div className='form-group'>
+              <input
+                type='text'
+                onChange={onChange}
+                value={name}
+                placeholder='Enter your name'
+                name='name'
+                id='name'
+                required
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                type='email'
+                onChange={onChange}
+                value={email}
+                placeholder='Enter your email address'
+                name='email'
+                id='email'
+                required
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                type={isPasswordVisible ? 'text' : 'password'}
+                onChange={onChange}
+                value={password}
+                placeholder='Enter your password'
+                name='password'
+                id='password'
+                required
+              />
+              <span onClick={handlePasswordVisible1}>
+                {isPasswordVisible ? <FaEye /> : <FaEyeSlash />}
+              </span>
+            </div>
+            <div className='form-group'>
+              <input
+                type={isConfrimPasswordVisible ? 'text' : 'password'}
+                onChange={onChange}
+                value={password2}
+                placeholder='Confirm your password'
+                name='password2'
+                id='password2'
+                required
+              />
+              <span onClick={handlePasswordVisible2}>
+                {isConfrimPasswordVisible ? <FaEye /> : <FaEyeSlash />}
+              </span>
+            </div>
+            <div className='form-group'>
+              <button className='btn_submit'>Submit</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
   );
 };
